@@ -8,7 +8,7 @@ function showSearch(){
     document.getElementById("searchForm").classList.toggle("hidden");
 }
 
-//populates stuff
+//populates edit form
 function showInfo(id, name, points, e_id){
     document.getElementById("i").value = id;
     document.getElementById("name").value = name;
@@ -27,8 +27,8 @@ function deleteEntry(id){
             },
             body: JSON.stringify({ ID: id })
         }).then(response => {
-            //reloads page
-            location.reload();
+            //reloads home page
+            window.location.replace("/");
         })
     }
 
